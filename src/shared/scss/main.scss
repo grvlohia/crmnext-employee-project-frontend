@@ -1,0 +1,12 @@
+/* Bootstrap overrides */
+
+@import "./_variables";
+
+/* Import bootstrap */
+
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+/* Other CSS Imports */
+
+
+/* All component level SCSS files are imported @ component level */

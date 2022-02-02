@@ -1,0 +1,26 @@
+.InfoCard {
+    margin-bottom: 10px;
+    background: #EEF2FF;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.ProfilePicture {
+    height: auto;
+    width: 100%;
+    max-width: 250px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.DetailsContainer {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+}
+
+.DetailsContainer label {
+    color: #369283;
+    font-weight: 500;
+    font-family: 'Ubuntu', sans-serif;
+}

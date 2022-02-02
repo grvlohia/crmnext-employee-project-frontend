@@ -1,0 +1,11 @@
+.Label {
+    color: #35858B;
+    font-weight: 700;
+    font-family: 'Ubuntu', sans-serif;
+    font-size:large;
+}
+
+.Span {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: medium;
+}

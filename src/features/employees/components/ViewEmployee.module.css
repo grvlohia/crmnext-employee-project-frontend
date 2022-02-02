@@ -1,0 +1,60 @@
+.Sidebar {
+  background: #072227;
+  height: auto;
+  border-radius: 15px;
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+  padding: 1em 0;
+}
+
+.ProfilePictureContainer {
+  width: 80%;
+  max-width: 250px;
+  margin: 0 auto;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.ProfilePicture {
+  height: auto;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.FullName {
+  color: #4fbdba;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.Sidebar label {
+  color: #4fbdba;
+  font-family: "Ubuntu", sans-serif;
+  margin-right: 1em;
+}
+
+.Sidebar span {
+  color: #f5f5f5;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.MainContainer {
+  background: #4FBDBA;
+  padding: 1em;
+  border-radius: 15px;
+}
+
+@media (min-width: 768px) {
+  .MainContainer {
+    margin-left: 1em;
+  }
+}
+
+@media (max-width: 767px) {
+    .MainContainer {
+        margin-top: 1em !important;
+    }
+}
+
+.MainContainer label {
+}

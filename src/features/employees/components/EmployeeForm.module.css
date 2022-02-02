@@ -1,0 +1,10 @@
+.FormContainer {
+    padding: 1em;
+    background: #072227;
+    border-radius: 15px;
+}
+
+.FormContainer label {
+    color: #35858B;
+    font-weight: 500;
+}
