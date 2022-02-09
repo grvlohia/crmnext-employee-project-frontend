@@ -15,10 +15,11 @@ interface Props {
   color?: ColorVariant;
   children?: ReactNode | ReactNode[];
   errors?: any;
+  backgroundColor?: string
 }
 
 const Panel = (props: Props) => {
-  const { id, header, collapsible, className, color, children, errors } = props;
+  const { id, header, collapsible, className, color, children, errors, backgroundColor } = props;
   const [open, setOpen] = useState(true);
 
   useEffect(() => {
@@ -30,7 +31,7 @@ const Panel = (props: Props) => {
   return (
     <Card
       className={clsx(color && "border-color", className)}
-      style={{ marginBottom: "1em" }}
+      style={{ marginBottom: "1em", backgroundColor: backgroundColor }}
     >
       {header ? (
         <Card.Header
@@ -44,7 +45,7 @@ const Panel = (props: Props) => {
           {collapsible ? (
             <Button
               color="light"
-              style={{ outline: "none", boxShadow: "none" }}
+              style={{ outline: "none", boxShadow: "none", backgroundColor: 'transparent', border: 'none' }}
               onClick={() =>
                 setOpen((prevState) => {
                   return !prevState;

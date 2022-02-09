@@ -1,0 +1,94 @@
+{
+  "category": [
+    {
+      "Name": "C1",
+      "Fields": {
+        "EmployeeName": {
+          "Type": 1,
+          "Caption": "Name",
+          "CaptionPosition": 0,
+          "SelectionMode": 2,
+          "Properties": {
+            "DisableSearch": 1,
+            "Width": {
+              "Min": 50,
+              "Max": 200
+            },
+            "AllowOdering": true,
+            "AllowInlineEditing": true
+          }
+        },
+        "DOJ": {
+          "Type": 2,
+          "Caption": "Date of joining",
+          "CaptionPosition": 1,
+          "SelectionMode": 2,
+          "Properties": {
+            "DisableSearch": 1,
+            "Width": {
+              "Min": 50,
+              "Max": 200
+            },
+            "AllowOdering": true,
+            "AllowInlineEditing": true,
+            "Formats": [
+              {
+                "Value": "dd-mm-yyy",
+                "Text": "DD-MM-yyy"
+              },
+              {
+                "Value": "mm-yy-yyy",
+                "Text": "11-30-2022"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "Name": "C2",
+      "Fields": {
+        "EmployeeEmail": {
+          "Type": 1,
+          "Caption": "Email",
+          "CaptionPosition": 0,
+          "SelectionMode": 2,
+          "Properties": {
+            "DisableSearch": 1,
+            "Width": {
+              "Min": 50,
+              "Max": 200
+            },
+            "AllowOdering": true,
+            "AllowInlineEditing": true
+          }
+        },
+        "DOB": {
+          "Type": 2,
+          "Caption": "Date of birth",
+          "CaptionPosition": 1,
+          "SelectionMode": 2,
+          "Properties": {
+            "DisableSearch": 1,
+            "Width": {
+              "Min": 50,
+              "Max": 200
+            },
+            "AllowOdering": true,
+            "AllowInlineEditing": true,
+            "Formats": [
+              {
+                "Value": "dd-mm-yyy",
+                "Text": "DD-MM-yyy"
+              },
+              {
+                "Value": "mm-yy-yyy",
+                "Text": "11-30-2022"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
