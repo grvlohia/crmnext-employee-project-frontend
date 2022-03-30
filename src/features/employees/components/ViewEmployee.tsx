@@ -2,6 +2,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import Panel from "../../../shared/components/UI/Panel";
 import Employee from "../models/employee";
 import getFullName from "../util/getFullName";
+import EmployeeProfileActionBar from "./EmployeeProfileActionBar";
 import InfoDetail from "./InfoDetail";
 
 import styleClasses from "./ViewEmployee.module.css";
@@ -15,6 +16,7 @@ const ViewEmployee = (props: Props) => {
   return (
     <Container>
       <Row>
+        {/* Sidebar */}
         <Col md={3} className={styleClasses.Sidebar}>
           <Row>
             <Col>
@@ -59,7 +61,9 @@ const ViewEmployee = (props: Props) => {
             </Col>
           </Row>
         </Col>
+        
         <Col className={styleClasses.MainContainer}>
+          {/* Employee Information */}
           <Panel
             id="employeeInformation"
             header="Employee Information"
@@ -89,6 +93,7 @@ const ViewEmployee = (props: Props) => {
             </Row>
           </Panel>
 
+          {/* Personal Information */}
           <Panel
             id="personalInformation"
             header="Personal Information"
@@ -143,6 +148,8 @@ const ViewEmployee = (props: Props) => {
               </Col>
             </Row>
           </Panel>
+
+          <EmployeeProfileActionBar employeeId={employee.id} isViewPage={true} />
         </Col>
       </Row>
     </Container>

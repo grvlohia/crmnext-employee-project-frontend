@@ -13,8 +13,6 @@ const EmployeeEditPage = () => {
     data: employee,
     isLoading,
     isError,
-    isStale,
-    refetch,
   } = useEmployee(id);
   const { mutate, isSuccess } = useUpdateEmployee();
 
@@ -26,14 +24,11 @@ const EmployeeEditPage = () => {
     return <div>Loading...</div>;
   }
 
-  if (isStale) {
-    refetch();
-  }
-
   const onFormSubmit = (values: NewEmployee) => {
     const existingEmployee = { ...employee } as Employee;
     const updatedEmployee: Employee = {
       ...values,
+      id: existingEmployee.id,
       employeeId: existingEmployee.employeeId,
       createdAt: existingEmployee.createdAt,
       updatedAt: existingEmployee.updatedAt,

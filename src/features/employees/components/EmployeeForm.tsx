@@ -1,8 +1,7 @@
 import { Formik } from "formik";
 import Employee from "../models/employee";
 import { object, string as yupString, date } from "yup";
-import { useHistory } from "react-router-dom";
-import useAddNewEmployee, { NewEmployee } from "../hooks/useAddNewEmployee";
+import { NewEmployee } from "../hooks/useAddNewEmployee";
 import styleClasses from "./EmployeeForm.module.css";
 import {
   Col,
@@ -32,7 +31,7 @@ const employeeFormSchema = object().shape({
     .matches(/^[a-zA-Z]+$/, "Only english alphabets are allowed")
     .required("First Name is required"),
   middleName: yupString()
-    .min(3, "Min length is 3")
+    .min(1, "Min length is 1")
     .trim()
     .matches(/^[a-zA-Z]+$/, "Only english alphabets are allowed")
     .nullable()
@@ -57,11 +56,7 @@ const employeeFormSchema = object().shape({
     .required("Email is required"),
   phone: yupString()
     .trim()
-    .required("Phone Number is required")
-    .matches(
-      new RegExp(/^(?:(?:\+|0{0,2})91(\s*[-]\s*)?|[0]?)?[6-9]\d{9}$/),
-      "Invalid Phone Number."
-    ),
+    .required("Phone Number is required"),
   permanentAddress: yupString()
     .matches(
       /^[a-zA-Z0-9 ,-/()]*$/,

@@ -13,7 +13,7 @@ const InfoDetail = (props: Props) => {
         <label className={styleClasses.Label}>{label}</label>
       </div>
       <div>
-        <span className={styleClasses.Span}>{!value || value.length == 0 ? "-" : value}</span>
+        <span className={styleClasses.Span}>{!value || value.length === 0 ? "-" : value}</span>
       </div>
     </>
   );

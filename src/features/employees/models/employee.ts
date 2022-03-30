@@ -1,4 +1,5 @@
 export default interface Employee {
+  id: string;
   employeeId: string;
   firstName: string;
   middleName: string;

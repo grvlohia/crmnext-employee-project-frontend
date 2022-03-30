@@ -1,10 +1,11 @@
 import axios from "axios";
 import { useQuery } from "react-query";
+import { constants } from "../../../shared/constants";
 import Employee from "../models/employee";
 
 const fetchEmployee = async (employeeId: string) => {
   const result = await axios.get(
-    `https://localhost:5001/employees/${employeeId}`
+    constants.MOCK_API_ENDPOINTS.GET_SINGLE_EMPLOYEE(employeeId)
   );
 
   return {

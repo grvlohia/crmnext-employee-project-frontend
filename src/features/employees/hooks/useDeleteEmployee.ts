@@ -1,8 +1,9 @@
 import axios from "axios";
 import { useMutation } from "react-query";
+import { constants } from "../../../shared/constants";
 
 const deleteEmployee = async (employeeId: string) => {
-    const result = await axios.delete(`https://localhost:5001/employees/${employeeId}`);
+    const result = await axios.delete(constants.MOCK_API_ENDPOINTS.DELETE_EMPLOYEE(employeeId));
     return result.data;
 }
 

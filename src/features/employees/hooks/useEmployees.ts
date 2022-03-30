@@ -1,8 +1,9 @@
 import axios from "axios";
 import { useQuery } from "react-query";
+import { constants } from "../../../shared/constants";
 
 const getEmployees = async () => {
-    const {data: employees} =  await axios.get('https://localhost:5001/employees');
+    const {data: employees} =  await axios.get(constants.MOCK_API_ENDPOINTS.GET_EMPLOYEES_LIST);
     
     return employees;
 }

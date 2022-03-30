@@ -48,7 +48,7 @@ const EmployeeInfoCard = (props: Props) => {
             <label>Sub Group:</label> <span>{employee.subGroup}</span>
           </div>
 
-          <EmployeeProfileActionBar employeeId={employee.employeeId} />
+          <EmployeeProfileActionBar employeeId={employee.id} isViewPage={false} />
         </Col>
       </Row>
     </div>

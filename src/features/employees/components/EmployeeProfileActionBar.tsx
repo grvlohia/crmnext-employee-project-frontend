@@ -5,10 +5,11 @@ import useDeleteEmployee from "../hooks/useDeleteEmployee";
 
 interface Props {
   employeeId: string;
+  isViewPage: boolean;
 }
 
 const EmployeeProfileActionBar = (props: Props) => {
-  const { employeeId } = props;
+  const { employeeId, isViewPage } = props;
   const { mutate, isSuccess: deleteSuccess } = useDeleteEmployee();
   const history = useHistory();
   const ActionBarStyles: CSSProperties = {
@@ -36,7 +37,7 @@ const EmployeeProfileActionBar = (props: Props) => {
     <div style={ActionBarStyles}>
       <Button
         variant="primary"
-        style={{ marginLeft: "5px" }}
+        style={{ marginLeft: "5px", display: isViewPage ? 'none': undefined}}
         onClick={onViewButtonClicked}
       >
         View
